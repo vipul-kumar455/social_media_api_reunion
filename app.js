@@ -49,7 +49,7 @@ app.use((error, req, resp, next) => ErrorMiddleware(error, req, resp, next))
 
 // Listening
 mongoose.connect(
-    "mongodb+srv://kumar:bLjD8ilM1lADjkmY@cluster0.tzuxn4f.mongodb.net/myFavDB?retryWrites=true&w=majority",
+    process.env.DB_STRING,
     { useNewUrlParser: true, useUnifiedTopology: true }
 )
     .then(() => {
